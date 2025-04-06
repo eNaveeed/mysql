@@ -43,20 +43,23 @@ newgrp docker
 
 ## Managing Containers
 
+### Start Containers
+To start the containers:
+
+```sh
+docker compose up
+```
+To start the containers in detached mode:
+
+```sh
+docker compose up -d
+```
 ### Remove Containers
 To stop and remove all containers, networks, and volumes created by Docker Compose:
 
 ```sh
 docker compose down
 ```
-
-### Start Containers
-To start the containers in detached mode:
-
-```sh
-docker compose up -d
-```
-
 ---
 
 ## Accessing the MySQL Container
@@ -73,6 +76,12 @@ To connect to the MySQL database from your host machine:
 
 ```sh
 mysql -h 127.0.0.1 -P 3306 -u user -puserpassword
+```
+### Run Commands
+Run sql commands inside mysql>:
+
+```sh
+SHOW DATABASES;
 ```
 
 ---
